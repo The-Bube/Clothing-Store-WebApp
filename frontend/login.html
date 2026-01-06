@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShopEase - Login</title>
+  <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+  <!-- Left Panel - Branding Section -->
+  <div class="left-panel">
+    <h1 class="brand-title">Welcome Back to ShopEase</h1>
+    <p class="brand-subtitle">Sign in to continue to your account.</p>
+  </div>
+  
+  <!-- Right Panel - Login Form Section -->
+  <div class="right-panel">
+    <button class="close-btn" onclick="window.location.href='index.html'">&times;</button>
+    
+    <!-- Main form container holding all login options -->
+    <div class="form-container">
+      <!-- Social Login Buttons Section -->
+      <div class="social-buttons">
+        <button class="social-btn facebook">
+          <span class="social-icon">f</span>
+          Continue with Facebook
+        </button>
+        
+        <!-- Google login button -->
+        <button class="social-btn google">
+          <span class="social-icon">G</span>
+          Continue with Google
+        </button>
+        
+        <!-- Apple login button -->
+        <button class="social-btn apple">
+          <span class="social-icon"></span>
+          Continue with Apple
+        </button>
+      </div>
+      
+      <!-- Divider Section -->
+      <!-- Visual separator between social login and email login -->
+      <div class="divider">or</div>
+      
+      <!-- Email Login Form -->
+      <form id="email-form">
+        <input type="email" id="email-input" placeholder="Email address" required>
+        
+        <!-- Checkbox Container for "Keep me signed in" option -->
+        <div class="checkbox-container">
+          <input type="checkbox" id="keep-signed">
+          <label for="keep-signed">Keep me signed in until I sign out</label>
+        </div>
+        
+        <!-- Button to submit the email form and proceed to password entry -->
+        <button type="submit" class="submit-btn">Sign In</button>
+      </form>
+      
+      <!-- Sign Up Link -->
+      <p class="signup-link">Not a member yet? <a href="signup-login.html">Sign Up.</a></p>
+    </div>
+  </div>
+  
+  <!-- Links to the external JavaScript file that handles login functionality -->
+  <script src="js/login.js"></script>
+</body>
+</html>

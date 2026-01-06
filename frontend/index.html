@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShopEase | Home</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">ShopEase</div>
+    <input type="text" id="searchBar" placeholder="Search for clothing...">
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="#">Men</a>
+      <a href="#">Women</a>
+      <a href="#">Accessories</a>
+      <a href="login.html" class="login-btn" id="account-btn">Login</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Find Your Style</h1>
+    <p>Trendy, affordable fashion — for everyone.</p>
+    <button class="shop-now">Shop Now</button>
+  </section>
+
+  <section class="products">
+    <h2>Featured Products</h2>
+    <div class="product-grid">
+      
+      <div class="product-card">
+        <img src="https://via.placeholder.com/200" alt="T-shirt">
+        <h3>Classic Tee</h3>
+        <p>$19.99</p>
+        <button>Add to Cart</button>
+      </div>
+
+      <div class="product-card">
+        <img src="https://via.placeholder.com/200" alt="Jeans">
+        <h3>Denim Jeans</h3>
+        <p>$39.99</p>
+        <button>Add to Cart</button>
+      </div>
+
+      <div class="product-card">
+        <img src="https://via.placeholder.com/200" alt="Jacket">
+        <h3>Leather Jacket</h3>
+        <p>$79.99</p>
+        <button>Add to Cart</button>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 ShopEase. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', async function() {
+      const accountBtn = document.getElementById('account-btn');
+      
+      if (!accountBtn) return;
+      
+      try {
+        const response = await fetch('/api/auth/status');
+        const data = await response.json();
+        
+        if (data.authenticated) {
+          const userName = localStorage.getItem('userName') || 'My Account';
+          accountBtn.textContent = userName;
+          accountBtn.href = 'myaccount.html';
+          accountBtn.classList.add('user-name');
+        } else {
+          accountBtn.textContent = 'Login';
+          accountBtn.href = 'login.html';
+          accountBtn.classList.remove('user-name');
+        }
+        
+      } catch (error) {
+        console.error('Auth check failed:', error);
+        accountBtn.textContent = 'Login';
+        accountBtn.href = 'login.html';
+      }
+    });
+  </script>
+</body>
+</html>
