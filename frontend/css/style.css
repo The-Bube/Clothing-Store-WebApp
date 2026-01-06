@@ -1,0 +1,122 @@
+/*Style for Homepage (index.js)*/
+body {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+/* Navbar (homepage only) */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #111;
+    color: #fff;
+    padding: 15px 30px;
+}
+
+.navbar .logo {
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+.navbar input {
+    width: 40%;
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+}
+
+.navbar nav a,
+.navbar nav button {
+    margin-left: 20px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.navbar nav a:hover,
+.navbar nav button:hover {
+    text-decoration: underline;
+}
+
+/* Hero (homepage only) */
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(to right, #4a90e2, #50c878);
+    color: white;
+}
+
+.hero .shop-now {
+    margin-top: 20px;
+    padding: 12px 25px;
+    border: none;
+    background: white;
+    color: #4a90e2;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.hero .shop-now:hover {
+    background: #eee;
+}
+
+/* Products (homepage only) */
+.products {
+    padding: 40px;
+    text-align: center;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.product-card {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.product-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.product-card button {
+    margin-top: 10px;
+    background: #4a90e2;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.product-card button:hover {
+    background: #357ab8;
+}
+
+/* Footer (homepage only) */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #111;
+    color: white;
+    margin-top: 50px;
+}
+
+.user-name {
+  cursor: pointer;
+  color: #00ff6c;
+  font-weight: bold;
+}
+.user-name:hover {
+  text-decoration: underline;
+}
